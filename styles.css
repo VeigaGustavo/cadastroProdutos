@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f8f9fa;
+    --text-color: #2c3e50;
+    --border-color: #e1e8ed;
+    --hover-color: #357abd;
+    --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 600;
+}
+
+.product-counter {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.upload-area {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-area.dragover {
+    border-color: var(--primary-color);
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.upload-area p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+.select-file-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: auto;
+}
+
+.select-file-btn:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-1px);
+}
+
+.table-container {
+    margin-top: 40px;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) {
+    background-color: var(--secondary-color);
+}
+
+tr:hover {
+    background-color: rgba(74, 144, 226, 0.05);
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .product-counter {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    .product-counter {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .upload-area {
+        min-height: 120px;
+        padding: 15px;
+    }
+
+    .upload-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .upload-area p {
+        font-size: 0.9em;
+    }
+
+    .select-file-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 0.9em;
+    }
+
+    .product-image {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .product-counter {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .upload-area {
+        min-height: 100px;
+        padding: 10px;
+    }
+
+    .upload-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .upload-area p {
+        font-size: 0.85em;
+    }
+
+    .select-file-btn {
+        padding: 6px 12px;
+        font-size: 0.85em;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.85em;
+    }
+
+    .product-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Ajuste para tabela em telas muito pequenas */
+    .table-container {
+        margin-top: 20px;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    th {
+        font-size: 0.8em;
+    }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .upload-area {
+        min-height: 80px;
+    }
+
+    textarea {
+        height: 80px;
+    }
+} 
