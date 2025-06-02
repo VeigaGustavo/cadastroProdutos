@@ -12,7 +12,7 @@ Sistema web para cadastro e gerenciamento de produtos com upload de imagens. Des
 
 ## 🎯 Como Usar
 
-1. Acesse a [página do projeto](https://seu-usuario.github.io/ecommerce)
+1. Acesse a [página do projeto](https://veigagustavo.github.io/cadastroProdutos/)
 2. Preencha o formulário com os dados do produto
 3. Arraste uma imagem ou clique em "Selecionar arquivo"
 4. Clique em "Cadastrar Produto"
