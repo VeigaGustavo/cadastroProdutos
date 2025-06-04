@@ -37,11 +37,15 @@
             <div class="form-group">
                 <label for="productImage">Imagem do Produto:</label>
                 <div class="upload-area" id="uploadArea">
-                    <div class="upload-content">
+                    <div class="upload-content" id="uploadContent">
                         <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='%234a90e2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3E%3Cpolyline points='17 8 12 3 7 8'/%3E%3Cline x1='12' y1='3' x2='12' y2='15'/%3E%3C/svg%3E" alt="Upload" class="upload-icon">
                         <p>Arraste e solte uma imagem aqui ou</p>
                         <button type="button" class="select-file-btn">Selecionar arquivo</button>
                         <input type="file" id="productImage" accept="image/*" required hidden>
+                    </div>
+                    <div class="image-preview" id="imagePreview" style="display: none;">
+                        <img id="previewImg" src="" alt="Preview">
+                        <button type="button" class="remove-image-btn" id="removeImage">×</button>
                     </div>
                 </div>
             </div>
