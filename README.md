@@ -17,12 +17,6 @@ Sistema web para cadastro e gerenciamento de produtos com upload de imagens. Des
 3. Arraste uma imagem ou clique em "Selecionar arquivo"
 4. Clique em "Cadastrar Produto"
 
-## 📱 Responsividade
-
-- Desktop (>1024px): Layout completo
-- Tablet (768px - 1024px): Ajustes moderados
-- Mobile (<768px): Layout compacto
-- Mobile pequeno (<480px): Layout ultra compacto
 
 ## 🛠️ Tecnologias
 
@@ -46,10 +40,6 @@ O sistema usa variáveis CSS para fácil personalização:
     --shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 ```
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## 👥 Contribuição
 
